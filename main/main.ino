@@ -20,7 +20,6 @@ void setup()
   Serial.begin(115200);
   pinMode(17, OUTPUT);
   digitalWrite(17, LOW);  
-
   
   if(!display.begin(SSD1306_SWITCHCAPVCC, SCREEN_ADDRESS))                      // SSD1306_SWITCHCAPVCC = generate display voltage from 3.3V internally
   {
@@ -28,7 +27,7 @@ void setup()
     for(;;); 
   }
 
-  delay(2000);
+  delay(1000);
   display.clearDisplay();
 
   display.setTextSize(1);
@@ -61,6 +60,7 @@ void loop()
     display.print(59-iMin);
     display.println("min");
     display.display();  
+    
     if (iMin == 59)
     {
       iMin = 0;
