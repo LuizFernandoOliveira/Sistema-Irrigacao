@@ -1,3 +1,11 @@
+/******************************************************************************/
+/* File name:         main.ino                                                */
+/* File description:  This file implement the functions needed to peform      */
+/*                    irrigation.                                             */
+/* Author name:       Luiz Fernando Pinto de Oliveira                         */
+/* Creation date:     18/12/2023                                              */
+/******************************************************************************/
+
 #include <SPI.h>
 #include <Wire.h>
 #include <Adafruit_GFX.h>
@@ -60,7 +68,7 @@ void loop()
     display.print(59-iMin);
     display.println("min");
     display.display();  
-    
+
     if (iMin == 59)
     {
       iMin = 0;
